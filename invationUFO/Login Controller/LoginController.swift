@@ -17,12 +17,20 @@ class LoginController: UIViewController {
 		return logoImage
 	}()
 	
+	private lazy var assembleButton: UIButton = {
+		let button = UIButton()
+		button.setTitle("Assemble Ship", for: UIControlState.normal)
+		button.sizeToFit()
+		button.translatesAutoresizingMaskIntoConstraints = false
+		return button
+	}()
+	
 	public let headingLabel: UILabel = {
 		let label = UILabel()
 		label.textAlignment = .center
 		label.text = "ACCESS MOTHERSHIP"
 		label.textColor = UIColor.white
-		label.font = UIFont(name:"Futura", size: 25.0)
+		label.font = UIFont(name: "Futura Bold", size: 25.0)
 		label.translatesAutoresizingMaskIntoConstraints = false
 		return label
 	}()
@@ -63,7 +71,8 @@ class LoginController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = UIColor(r: 62, g: 116, b: 110)
+        self.navigationController?.navigationBar.isHidden = true
+		view.backgroundColor = UIColor(r: 62, g: 116, b: 110)
 		configureView()
 		
     }
@@ -75,6 +84,7 @@ class LoginController: UIViewController {
 		self.view.addSubview(mothershipPassphraseInput)
 		self.view.addSubview(loginButton)
 		self.view.addSubview(logoImage)
+		self.view.addSubview(assembleButton)
 		
 		self.logoImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
 		self.logoImage.bottomAnchor.constraint(equalTo: headingLabel.topAnchor, constant: -36).isActive = true
@@ -99,11 +109,23 @@ class LoginController: UIViewController {
 		self.loginButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
 		self.loginButton.heightAnchor.constraint(equalToConstant: 80).isActive = true
 		self.loginButton.widthAnchor.constraint(equalToConstant: 273).isActive = true
-		self.loginButton.topAnchor.constraint(equalTo: mothershipPassphraseInput.bottomAnchor, constant: 79).isActive = true
+		self.loginButton.topAnchor.constraint(equalTo: mothershipPassphraseInput.bottomAnchor, constant: 34).isActive = true
+		
+		
+		self.assembleButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 34).isActive = true
+		self.assembleButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+		self.assembleButton.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 16).isActive = true
+		self.assembleButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -16).isActive = true
+		self.assembleButton.heightAnchor.constraint(equalToConstant: 36.0).isActive = true
 	}
 	
 	override var preferredStatusBarStyle: UIStatusBarStyle {
 		return .lightContent
+	}
+	
+	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+		self.mothershipNameInput.resignFirstResponder()
+		self.mothershipPassphraseInput.resignFirstResponder()
 	}
 
 }

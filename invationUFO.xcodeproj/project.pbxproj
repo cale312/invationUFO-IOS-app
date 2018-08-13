@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F46D65352121DBB3008457EC /* DashboardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46D65342121DBB3008457EC /* DashboardController.swift */; };
+		F46D65372121DBEB008457EC /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F46D65362121DBEB008457EC /* RegisterController.swift */; };
 		F4C0C977211D9B5C0089F297 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C0C976211D9B5C0089F297 /* AppDelegate.swift */; };
-		F4C0C979211D9B5C0089F297 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C0C978211D9B5C0089F297 /* ViewController.swift */; };
+		F4C0C979211D9B5C0089F297 /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C0C978211D9B5C0089F297 /* WelcomeController.swift */; };
 		F4C0C97C211D9B5C0089F297 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C0C97A211D9B5C0089F297 /* Main.storyboard */; };
 		F4C0C97E211D9B5E0089F297 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4C0C97D211D9B5E0089F297 /* Assets.xcassets */; };
 		F4C0C981211D9B5E0089F297 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4C0C97F211D9B5E0089F297 /* LaunchScreen.storyboard */; };
@@ -16,9 +18,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F46D65342121DBB3008457EC /* DashboardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardController.swift; sourceTree = "<group>"; };
+		F46D65362121DBEB008457EC /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		F4C0C973211D9B5C0089F297 /* invationUFO.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = invationUFO.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4C0C976211D9B5C0089F297 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F4C0C978211D9B5C0089F297 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F4C0C978211D9B5C0089F297 /* WelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
 		F4C0C97B211D9B5C0089F297 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F4C0C97D211D9B5E0089F297 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F4C0C980211D9B5E0089F297 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +41,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F46D65312121D483008457EC /* Welcome Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F4C0C978211D9B5C0089F297 /* WelcomeController.swift */,
+			);
+			path = "Welcome Controller";
+			sourceTree = "<group>";
+		};
+		F46D65322121DB72008457EC /* Register Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F46D65362121DBEB008457EC /* RegisterController.swift */,
+			);
+			path = "Register Controller";
+			sourceTree = "<group>";
+		};
+		F46D65332121DB7E008457EC /* Dashboard Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F46D65342121DBB3008457EC /* DashboardController.swift */,
+			);
+			path = "Dashboard Controller";
+			sourceTree = "<group>";
+		};
 		F4C0C96A211D9B5C0089F297 = {
 			isa = PBXGroup;
 			children = (
@@ -56,7 +84,10 @@
 		F4C0C975211D9B5C0089F297 /* invationUFO */ = {
 			isa = PBXGroup;
 			children = (
-				F4C0C988211DA21F0089F297 /* Controller */,
+				F46D65332121DB7E008457EC /* Dashboard Controller */,
+				F46D65322121DB72008457EC /* Register Controller */,
+				F46D65312121D483008457EC /* Welcome Controller */,
+				F4C0C988211DA21F0089F297 /* Login Controller */,
 				F4C0C976211D9B5C0089F297 /* AppDelegate.swift */,
 				F4C0C97A211D9B5C0089F297 /* Main.storyboard */,
 				F4C0C97D211D9B5E0089F297 /* Assets.xcassets */,
@@ -66,13 +97,12 @@
 			path = invationUFO;
 			sourceTree = "<group>";
 		};
-		F4C0C988211DA21F0089F297 /* Controller */ = {
+		F4C0C988211DA21F0089F297 /* Login Controller */ = {
 			isa = PBXGroup;
 			children = (
 				F4C0C989211DA29B0089F297 /* LoginController.swift */,
-				F4C0C978211D9B5C0089F297 /* ViewController.swift */,
 			);
-			path = Controller;
+			path = "Login Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,7 +176,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F4C0C979211D9B5C0089F297 /* ViewController.swift in Sources */,
+				F46D65372121DBEB008457EC /* RegisterController.swift in Sources */,
+				F46D65352121DBB3008457EC /* DashboardController.swift in Sources */,
+				F4C0C979211D9B5C0089F297 /* WelcomeController.swift in Sources */,
 				F4C0C98A211DA29B0089F297 /* LoginController.swift in Sources */,
 				F4C0C977211D9B5C0089F297 /* AppDelegate.swift in Sources */,
 			);
